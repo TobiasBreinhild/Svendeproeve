@@ -1,0 +1,135 @@
+﻿<Page x:Class="SvendeproeveProjekt.UdlejningPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SvendeproeveProjekt"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="UdlejningPage">
+
+    <Grid
+        Background="#333333"
+        >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label
+            Content="Udlejning"
+            FontSize="80"
+            FontWeight="Bold"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Column="1"
+            >
+        </Label>
+        <Label
+            Content="Vælg hvilket værktøj du gerne vil udleje"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="25"
+            Foreground="White"
+            >
+            
+        </Label>
+        <ComboBox
+            x:Name="itemCombo"
+            Height="60"
+            Width="400"
+            FontSize="30"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,80,200,0"
+            >
+        </ComboBox>
+        <Button
+            Content="Opdater"
+            Height="60"
+            Width="200"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="40"
+            FontWeight="Bold"
+            Foreground="White"
+            Background="Black"
+            BorderBrush="White"
+            BorderThickness="2"
+            Margin="450,80,0,0"
+            Click="UpdateComboBox"
+            >
+        </Button>
+        <Label
+            Content="Skriv navnet på kunden"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            FontSize="25"
+            Foreground="White"
+            Margin="0,0,0,80"
+            >
+
+        </Label>
+        <TextBox
+            x:Name="customerNameText"
+            Height="50"
+            Width="400"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,10"
+            FontSize="30"
+            >
+            
+        </TextBox>
+        <Button
+            Height="50"
+            Width="180"
+            Content="Udlej vare"
+            Grid.Column="1"
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="24"
+            FontWeight="Bold"
+            Foreground="White"
+            Background="Black"
+            BorderBrush="White"
+            BorderThickness="2"
+            Click="UdlejVare"
+            >
+            
+        </Button>
+        <Button
+            Height="50"
+            Width="150"
+            Content="Tilbage"
+            FontSize="24"
+            FontWeight="Bold"
+            Foreground="White"
+            Background="Black"
+            BorderBrush="White"
+            BorderThickness="2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,10,0,0"
+            Click="NavigateToMenu"
+            >
+        </Button>
+    </Grid>
+</Page>
